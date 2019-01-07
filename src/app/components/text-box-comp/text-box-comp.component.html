@@ -1,0 +1,13 @@
+<div *ngFor="let user of users" class="form-group">
+  <label>{{user.label}}</label>
+  <input type="text" 
+         class="form-control"
+         [(ngModel)]=user.name
+         
+         required
+  >
+  
+  <div [hidden]="!user.label.errors?.required" class="invalid-feedback">
+    First name required
+  </div>
+</div>
