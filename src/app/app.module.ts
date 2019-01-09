@@ -12,6 +12,9 @@ import { PostService } from './services/post.service';
 import { PostsComponent } from './components/posts/posts.component';
 import { FormComponentsComponent } from './form-components/form-components.component';
 import { TextBoxCompComponent } from './components/text-box-comp/text-box-comp.component';
+import { CustomTextboxComponent } from './components/custom-textbox/custom-textbox.component';
+import { CustomCheckboxComponent } from './components/custom-checkbox/custom-checkbox.component';
+import { CustomFormComponentsComponent } from './components/custom-form-components/custom-form-components.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { TextBoxCompComponent } from './components/text-box-comp/text-box-comp.c
     NavbarComponent,
     PostsComponent,
     FormComponentsComponent,
-    TextBoxCompComponent
+    TextBoxCompComponent,
+    CustomTextboxComponent,
+    CustomCheckboxComponent,
+    CustomFormComponentsComponent
   ],
   imports: [
     BrowserModule,

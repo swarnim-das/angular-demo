@@ -1,7 +1,37 @@
-<div class="card card-body mb-3">
+<!--<div class="card card-body mb-3">
   <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    
     <app-text-box-comp [users]="user">
-
+        
     </app-text-box-comp>
+    
+    <button class="btn btn-primary btn-block mb-3">Submit</button>
   </form>
+</div>-->
+
+<!--<app-custom-textbox [textboxdata]="textboxdata">
+
+</app-custom-textbox>-->
+<div class="card card-body mb-3">
+  <label>Text Box:</label>
+  <app-custom-form-components [textboxdata]="textboxdata">
+  </app-custom-form-components>
+
+  <label>Checkbox:</label>
+  <app-custom-form-components [checkboxdata]="checkboxdata">
+  </app-custom-form-components>
+  
+  <app-custom-form-components [buttondata]="buttondata">
+  </app-custom-form-components>
+  
+  <label>Radio Buttons:</label>
+  <app-custom-form-components [radiobuttondata]="radiobuttondata1">
+  </app-custom-form-components>
+
+  <app-custom-form-components [radiobuttondata]="radiobuttondata2">
+  </app-custom-form-components>
+
+  <label>Text Area:</label>
+  <app-custom-form-components [textareadata]="textareadata">
+  </app-custom-form-components>
 </div>

@@ -1,0 +1,21 @@
+
+<div *ngIf="textboxdata">
+  <input type={{textboxdata.type}} name={{textboxdata.name}} placeholder={{textboxdata.placeholder}} class="form-control"/>
+</div>
+
+<div *ngIf="checkboxdata">
+  <input type="{{checkboxdata.type}}" name={{checkboxdata.name}} value={{checkboxdata.value}} />
+</div>
+
+<div *ngIf="buttondata">
+  <input type="{{buttondata.type}}" name={{buttondata.name}} value={{buttondata.value}} class="form-control btn-primary"/>
+</div>
+
+<div *ngIf="radiobuttondata">
+  <input type={{radiobuttondata.type}} name={{radiobuttondata.name}} value={{radiobuttondata.value}} />
+</div>
+
+<div *ngIf="textareadata">
+  <textarea rows={{textareadata.rows}} cols={{textareadata.cols}} class="form-control">
+  </textarea>
+</div>

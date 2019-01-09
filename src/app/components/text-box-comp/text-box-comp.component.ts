@@ -10,9 +10,20 @@ export class TextBoxCompComponent implements OnInit {
   @Input()
   users
 
+
+  myObj = [];
+
   constructor() { }
 
   ngOnInit() {
+    
+    this.myObj = this.users.map((e)=>{
+      e.name = ''
+    })
+  }
+  
+  myFun() {
+    console.log("hello");
   }
 
 }

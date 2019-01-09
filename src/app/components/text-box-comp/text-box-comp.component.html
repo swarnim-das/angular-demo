@@ -1,13 +1,14 @@
-<div *ngFor="let user of users" class="form-group">
-  <label>{{user.label}}</label>
-  <input type="text" 
-         class="form-control"
-         [(ngModel)]=user.name
-         
-         required
-  >
-  
-  <div [hidden]="!user.label.errors?.required" class="invalid-feedback">
-    First name required
+<div *ngFor="let user of users; let obj of myObj" class="form-group">
+
+  <label [ngClass]="{'is-invalid': false}">{{user.label}}</label>
+  <input type="text" class="form-control" [(ngModel)]="obj.name" #elem="ngModel" [ngClass]="{'is-invalid': elem.errors && elem.touched}"
+    required={{user.required}} pattern={{user.pattern}}>
+  <div [hidden]="!elem.errors?.required" class="invalid-feedback">
+    {{user.label}} required
   </div>
+
+  <div [hidden]="!elem.errors?.pattern" class="invalid-feedback">
+    {{user.label}} is not valid
+  </div>
+  
 </div>
